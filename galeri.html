@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Little Gallery ♡</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="galeri.css">
+</head>
+<body>
+
+    <div class="decoration deco-one">♡</div>
+    <div class="decoration deco-two">✿</div>
+    <div class="decoration deco-three">୨୧</div>
+
+    <main class="gallery-container">
+
+        <a href="siti.html" class="back-button">← Back to home</a>
+
+        <header class="gallery-header">
+            <span class="eyebrow">YOUR LITTLE PHOTO COLLECTION</span>
+            <h1>My Little <span>Gallery</span></h1>
+            <p>Every picture holds a little piece of happiness.</p>
+            <div class="divider">───── ♡ ─────</div>
+        </header>
+
+        <section class="gallery-info">
+            <div>
+                <h2>Captured Moments</h2>
+                <p>Your photobooth memories live here.</p>
+            </div>
+
+            <span class="total-photos" id="total-photos">0 photos</span>
+        </section>
+
+        <section id="gallery-grid" class="gallery-grid">
+        </section>
+
+        <div id="empty-state" class="empty-state">
+            <div class="empty-icon">♡</div>
+            <h2>No photos yet!</h2>
+            <p>Your little memories will appear here after you use the Photobox.</p>
+            <a href="photobox.html" class="photobox-button">Open Photobox ♡</a>
+        </div>
+
+        <footer class="gallery-footer">
+            <div>Made with love ♡</div>
+            <p>Keep every little moment close to your heart.</p>
+        </footer>
+
+    </main>
+
+    <!-- PREVIEW FOTO -->
+    <div class="lightbox" id="lightbox">
+        <button class="close-lightbox" id="close-lightbox">&times;</button>
+
+        <div class="preview-content">
+            <div class="preview-frame">
+                <img id="preview-image" src="" alt="Photobox memory">
+            </div>
+
+            <p id="preview-date"></p>
+
+            <div class="preview-actions">
+                <button id="download-preview" class="download-button">
+                    Download ♡
+                </button>
+
+                <button id="delete-preview" class="delete-button">
+                    Delete
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="galeri.js"></script>
+</body>
+</html>

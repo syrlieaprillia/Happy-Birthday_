@@ -1,0 +1,375 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fff8f5;
+    color: #795d61;
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.gallery-container {
+    max-width: 1150px;
+    margin: auto;
+    padding: 35px;
+    position: relative;
+}
+
+.back-button {
+    display: inline-block;
+    text-decoration: none;
+    color: #a16e7d;
+    background: white;
+    border: 1px solid #f3dce1;
+    border-radius: 30px;
+    padding: 10px 19px;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.back-button:hover {
+    background: #f8e2e8;
+    transform: translateX(-4px);
+}
+
+/* HEADER */
+
+.gallery-header {
+    text-align: center;
+    padding: 60px 15px 45px;
+}
+
+.eyebrow {
+    color: #c28c9c;
+    font-size: 10px;
+    letter-spacing: 4px;
+    font-weight: 700;
+}
+
+.gallery-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(45px, 7vw, 72px);
+    font-weight: 500;
+    color: #8c606b;
+    margin: 15px 0;
+}
+
+.gallery-header h1 span {
+    color: #d394a7;
+    font-style: italic;
+}
+
+.gallery-header p {
+    font-size: 13px;
+    color: #a7868a;
+}
+
+.divider {
+    color: #d69cab;
+    margin-top: 23px;
+}
+
+/* INFO */
+
+.gallery-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    padding-bottom: 17px;
+    border-bottom: 1px solid #efdde0;
+}
+
+.gallery-info h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    color: #946b75;
+    font-weight: 500;
+}
+
+.gallery-info p {
+    font-size: 11px;
+    color: #b29398;
+    margin-top: 5px;
+}
+
+.total-photos {
+    background: #f9e8ec;
+    color: #ae7888;
+    border-radius: 30px;
+    padding: 9px 15px;
+    font-size: 11px;
+}
+
+/* GALLERY GRID */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 27px;
+}
+
+.photo-card {
+    background: white;
+    padding: 11px 11px 17px;
+    border: 1px solid #f0e3df;
+    box-shadow: 0 7px 18px rgba(147, 101, 109, 0.12);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.photo-card:nth-child(3n + 1) {
+    transform: rotate(-2deg);
+}
+
+.photo-card:nth-child(3n + 2) {
+    transform: rotate(1.5deg);
+    margin-top: 12px;
+}
+
+.photo-card:nth-child(3n) {
+    transform: rotate(2deg);
+}
+
+.photo-card:hover {
+    transform: translateY(-7px) rotate(0deg) scale(1.02);
+    box-shadow: 0 14px 25px rgba(147, 101, 109, 0.2);
+}
+
+.photo-card img {
+    width: 100%;
+    display: block;
+    object-fit: contain;
+    background: #f9e9e9;
+}
+
+.photo-card p {
+    text-align: center;
+    font-family: 'Caveat', cursive;
+    color: #a87883;
+    font-size: 21px;
+    padding-top: 10px;
+}
+
+/* EMPTY STATE */
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    background: #fffdfc;
+    border: 1px dashed #e9c6d0;
+    border-radius: 15px;
+}
+
+.empty-icon {
+    font-size: 50px;
+    color: #d69cab;
+    margin-bottom: 15px;
+}
+
+.empty-state h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    color: #946b75;
+    margin-bottom: 10px;
+}
+
+.empty-state p {
+    font-size: 12px;
+    color: #aa8b91;
+    line-height: 1.8;
+}
+
+.photobox-button {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background: #d99bab;
+    padding: 12px 22px;
+    border-radius: 30px;
+    margin-top: 22px;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.photobox-button:hover {
+    background: #bd8293;
+}
+
+/* DECORATION */
+
+.decoration {
+    position: fixed;
+    color: #e5b2bd;
+    opacity: 0.55;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.deco-one {
+    top: 20%;
+    left: 5%;
+    font-size: 35px;
+}
+
+.deco-two {
+    top: 45%;
+    right: 5%;
+    font-size: 40px;
+}
+
+.deco-three {
+    bottom: 12%;
+    left: 7%;
+    font-size: 38px;
+}
+
+/* FOOTER */
+
+.gallery-footer {
+    text-align: center;
+    padding-top: 65px;
+    color: #c18c9a;
+}
+
+.gallery-footer div {
+    font-family: 'Caveat', cursive;
+    font-size: 25px;
+}
+
+.gallery-footer p {
+    font-size: 11px;
+    margin-top: 7px;
+}
+
+/* LIGHTBOX */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(54, 37, 43, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    padding: 20px;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.preview-content {
+    max-width: 450px;
+    width: 90%;
+    text-align: center;
+}
+
+.preview-frame {
+    background: white;
+    padding: 12px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+.preview-frame img {
+    display: block;
+    width: 100%;
+    max-height: 65vh;
+    object-fit: contain;
+    background: #f9e9e9;
+}
+
+#preview-date {
+    font-family: 'Caveat', cursive;
+    font-size: 22px;
+    color: white;
+    margin-top: 15px;
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 20px;
+    right: 28px;
+    border: none;
+    background: none;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.preview-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.preview-actions button {
+    border: none;
+    padding: 11px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.download-button {
+    background: #e7b5c1;
+    color: #704b55;
+}
+
+.delete-button {
+    background: #fff;
+    color: #a16e7d;
+}
+
+.preview-actions button:hover {
+    transform: translateY(-3px);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .gallery-container {
+        padding: 25px 18px;
+    }
+
+    .gallery-header {
+        padding: 45px 5px 35px;
+    }
+}
+
+@media (max-width: 420px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+
+    .photo-card {
+        padding: 8px 8px 13px;
+    }
+
+    .photo-card p {
+        font-size: 18px;
+    }
+
+    .gallery-info h2 {
+        font-size: 19px;
+    }
+
+    .total-photos {
+        padding: 7px 10px;
+        font-size: 10px;
+    }
+}

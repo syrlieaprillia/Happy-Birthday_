@@ -1,0 +1,1046 @@
+
+/* =========================================
+   PHOTOBOX — SITI'S SPECIAL DAY
+   Vintage / Cherry / Secret Garden
+========================================= */
+
+:root {
+    --pink: #d58da7;
+    --pink-dark: #a96882;
+    --pink-light: #f8e5eb;
+    --ivory: #fffaf4;
+    --cream: #f8f1e9;
+    --text: #745563;
+    --muted: #a18a91;
+    --border: #eddae0;
+    --serif: "Playfair Display", Georgia, serif;
+    --sans: "DM Sans", sans-serif;
+    --script: "Caveat", cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: #fff9f5;
+    color: var(--text);
+    font-family: var(--sans);
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   BACKGROUND DECORATION
+========================================= */
+
+.background-decoration {
+    position: fixed;
+    z-index: -1;
+    pointer-events: none;
+    color: #e9c5d1;
+    opacity: 0.4;
+}
+
+.decoration-one {
+    top: 18%;
+    left: 3%;
+    font-size: 65px;
+    transform: rotate(-15deg);
+}
+
+.decoration-two {
+    top: 55%;
+    right: 3%;
+    font-size: 80px;
+}
+
+.decoration-three {
+    bottom: 10%;
+    left: 7%;
+    font-size: 45px;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    width: 100%;
+    min-height: 76px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #f0e1e4;
+    background: rgba(255, 250, 246, 0.88);
+    backdrop-filter: blur(12px);
+}
+
+.back-link {
+    text-decoration: none;
+    color: var(--pink-dark);
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+.back-link:hover {
+    transform: translateX(-4px);
+}
+
+.back-link span {
+    font-size: 18px;
+    margin-right: 7px;
+}
+
+.nav-logo {
+    font-family: var(--serif);
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+.nav-logo span {
+    color: var(--pink);
+}
+
+.nav-date {
+    color: var(--muted);
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.page-container {
+    width: min(1100px, 88%);
+    margin: auto;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.intro-section {
+    padding: 85px 0 70px;
+    text-align: center;
+    position: relative;
+}
+
+.eyebrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: var(--pink-dark);
+    font-size: 10px;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+.eyebrow span {
+    color: #d8a5b7;
+}
+
+.intro-section h1 {
+    margin-top: 22px;
+    font-family: var(--serif);
+    font-size: clamp(52px, 8vw, 82px);
+    font-weight: 500;
+    line-height: 0.98;
+    letter-spacing: -3px;
+    color: #745563;
+}
+
+.intro-section h1 em {
+    color: #ce8ca6;
+    font-weight: 500;
+}
+
+.intro-description {
+    max-width: 440px;
+    margin: 25px auto 0;
+    color: #9a828b;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.intro-decoration {
+    margin-top: 24px;
+    color: #d49ab0;
+    font-size: 33px;
+}
+
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.template-section,
+.camera-section {
+    margin-bottom: 90px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 28px;
+}
+
+.section-label {
+    color: #c18a9e;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    margin-top: 8px;
+    font-family: var(--serif);
+    font-size: 31px;
+    font-weight: 500;
+    color: #795966;
+}
+
+.heading-heart {
+    font-size: 35px;
+    color: #d9a3b6;
+}
+
+.camera-icon {
+    font-size: 30px;
+}
+
+
+/* =========================================
+   TEMPLATE GRID
+========================================= */
+
+.template-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 23px;
+}
+
+.template-card {
+    padding: 13px;
+    border: 1px solid #eddae0;
+    border-radius: 17px;
+    background: #fffdfb;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s ease;
+    color: var(--text);
+    font-family: var(--sans);
+}
+
+.template-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(135, 88, 105, 0.1);
+}
+
+.template-card.active {
+    border: 2px solid #d18ba5;
+    background: #fff4f6;
+    box-shadow: 0 8px 25px rgba(195, 125, 151, 0.13);
+}
+
+
+/* =========================================
+   TEMPLATE PREVIEW
+========================================= */
+
+.template-preview {
+    height: 250px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid #fff;
+}
+
+.preview-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    width: 72%;
+}
+
+.preview-content strong {
+    font-family: var(--serif);
+    font-size: 13px;
+    letter-spacing: 1px;
+    line-height: 1.3;
+}
+
+.preview-content small {
+    font-size: 7px;
+    letter-spacing: 2px;
+    margin-top: 8px;
+}
+
+.preview-photo {
+    width: 100%;
+    height: 35px;
+    background: rgba(255,255,255,0.7);
+    margin-top: 6px;
+    border: 2px solid rgba(255,255,255,0.9);
+}
+
+
+/* Vintage */
+
+.vintage-preview {
+    background-color: #e8d7bc;
+    background-image: radial-gradient(
+        rgba(110, 80, 50, 0.15) 1px,
+        transparent 1px
+    );
+    background-size: 8px 8px;
+    color: #76583f;
+}
+
+.vintage-preview .preview-photo {
+    background: #b69c80;
+}
+
+.film-holes {
+    position: absolute;
+    left: 6px;
+    top: 0;
+    bottom: 0;
+    width: 10px;
+    background: repeating-linear-gradient(
+        to bottom,
+        #987957 0 9px,
+        transparent 9px 18px
+    );
+}
+
+.preview-star {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+
+/* Cherry */
+
+.cherry-preview {
+    background-color: #f6cbd3;
+    background-image:
+        linear-gradient(45deg, #ffffff65 25%, transparent 25%),
+        linear-gradient(-45deg, #ffffff65 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #ffffff65 75%),
+        linear-gradient(-45deg, transparent 75%, #ffffff65 75%);
+    background-size: 18px 18px;
+    color: #a4495f;
+}
+
+.cherry-preview .preview-photo {
+    background: #e6a0ac;
+}
+
+.cherry-decoration {
+    position: absolute;
+    z-index: 3;
+    font-size: 20px;
+}
+
+.top-left {
+    top: 8px;
+    left: 12px;
+}
+
+.top-right {
+    top: 8px;
+    right: 12px;
+}
+
+.bottom-right {
+    bottom: 8px;
+    right: 12px;
+}
+
+
+/* Garden */
+
+.garden-preview {
+    background: #e8dfee;
+    border: 5px double #c3acd1;
+    color: #79618b;
+}
+
+.garden-preview .preview-photo {
+    background: #c4b1d4;
+}
+
+.garden-flower {
+    position: absolute;
+    color: #b88eae;
+    font-size: 25px;
+}
+
+.flower-one {
+    top: 10px;
+    left: 10px;
+}
+
+.flower-two {
+    top: 10px;
+    right: 10px;
+    color: #d5a9bb;
+}
+
+.flower-three {
+    bottom: 8px;
+    right: 15px;
+}
+
+
+/* =========================================
+   TEMPLATE INFO
+========================================= */
+
+.template-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 5px 5px;
+}
+
+.template-info h3 {
+    font-family: var(--serif);
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.template-info p {
+    margin-top: 4px;
+    font-size: 11px;
+    color: #a38d95;
+}
+
+.template-number {
+    color: #cda2b0;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   CAMERA SECTION
+========================================= */
+
+.studio-layout {
+    display: grid;
+    grid-template-columns: 1fr 270px;
+    gap: 25px;
+    align-items: stretch;
+}
+
+.camera-card {
+    padding: 17px;
+    border: 1px solid #eddae0;
+    border-radius: 19px;
+    background: #fffdfb;
+    box-shadow: 0 12px 35px rgba(125, 78, 97, 0.06);
+}
+
+.camera-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 5px 15px;
+}
+
+.camera-live {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    color: #876c78;
+}
+
+.live-dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    margin-right: 7px;
+    border-radius: 50%;
+    background: #d58da7;
+    box-shadow: 0 0 0 4px #f9e5eb;
+}
+
+.camera-counter {
+    font-size: 10px;
+    color: #b28b9b;
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   CAMERA VIEW
+========================================= */
+
+.camera-view {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #eadce1;
+}
+
+#camera {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scaleX(-1);
+}
+
+.camera-placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color: #987e8a;
+}
+
+.placeholder-camera {
+    font-size: 48px;
+    margin-bottom: 13px;
+}
+
+.camera-placeholder h3 {
+    font-family: var(--serif);
+    font-size: 21px;
+    font-weight: 500;
+}
+
+.camera-placeholder p {
+    font-size: 12px;
+    margin-top: 9px;
+    line-height: 1.6;
+}
+
+
+/* Camera corners */
+
+.camera-corner {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-color: rgba(255,255,255,0.8);
+    border-style: solid;
+    z-index: 3;
+}
+
+.corner-tl {
+    top: 15px;
+    left: 15px;
+    border-width: 2px 0 0 2px;
+}
+
+.corner-tr {
+    top: 15px;
+    right: 15px;
+    border-width: 2px 2px 0 0;
+}
+
+.corner-bl {
+    bottom: 15px;
+    left: 15px;
+    border-width: 0 0 2px 2px;
+}
+
+.corner-br {
+    bottom: 15px;
+    right: 15px;
+    border-width: 0 2px 2px 0;
+}
+
+
+/* Countdown */
+
+.countdown {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--serif);
+    font-size: clamp(70px, 12vw, 120px);
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 6;
+}
+
+.countdown.show {
+    opacity: 1;
+    animation: countdownPop 0.5s ease;
+}
+
+@keyframes countdownPop {
+    0% {
+        transform: scale(1.7);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+/* Flash */
+
+.flash {
+    position: absolute;
+    inset: 0;
+    background: white;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 8;
+}
+
+.flash.active {
+    animation: cameraFlash 0.25s ease;
+}
+
+@keyframes cameraFlash {
+    0% { opacity: 0; }
+    30% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+
+/* =========================================
+   CAMERA INFO
+========================================= */
+
+.camera-bottom {
+    padding: 14px 5px 5px;
+    text-align: center;
+}
+
+#camera-status {
+    font-size: 12px;
+    font-weight: 700;
+    color: #a66f86;
+}
+
+#camera-hint {
+    margin-top: 5px;
+    font-size: 11px;
+    color: #a9959d;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.camera-actions,
+.result-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn {
+    min-height: 45px;
+    padding: 12px 19px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.25s ease;
+}
+
+.btn:hover:not(:disabled) {
+    transform: translateY(-3px);
+}
+
+.btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.btn-primary {
+    color: white;
+    background: #c9829e;
+    box-shadow: 0 5px 15px rgba(201, 130, 158, 0.2);
+}
+
+.btn-primary:hover:not(:disabled) {
+    background: #b76f8c;
+}
+
+.btn-secondary {
+    color: #956e80;
+    background: #f8e9ee;
+    border: 1px solid #eed6df;
+}
+
+.btn-secondary:hover:not(:disabled) {
+    background: #f4dce5;
+}
+
+.camera-actions .btn {
+    flex: 1;
+}
+
+
+/* =========================================
+   SIDE NOTE
+========================================= */
+
+.studio-note {
+    position: relative;
+    padding: 27px 24px;
+    border-radius: 18px;
+    background: #f6e9ed;
+    border: 1px solid #efdce3;
+}
+
+.note-sticker {
+    position: absolute;
+    top: 15px;
+    right: 18px;
+    font-size: 27px;
+    color: #d195ab;
+}
+
+.studio-note h3 {
+    margin-top: 17px;
+    font-family: var(--serif);
+    font-size: 35px;
+    line-height: 1.1;
+    font-weight: 500;
+}
+
+.studio-note h3 em {
+    color: #c17e98;
+}
+
+.studio-note > p {
+    margin-top: 17px;
+    color: #977e89;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.note-divider {
+    height: 1px;
+    background: #e7cdd7;
+    margin: 22px 0;
+}
+
+.shot-guide {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.shot-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.shot-item span {
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #fff9fa;
+    color: #bd8096;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.shot-item p {
+    font-size: 12px;
+    color: #8d7480;
+}
+
+.note-signature {
+    margin-top: 28px;
+    text-align: right;
+    font-family: var(--script);
+    font-size: 23px;
+    color: #b77b93;
+}
+
+
+/* =========================================
+   CAPTURE STATUS
+========================================= */
+
+.capture-status {
+    text-align: center;
+    margin-top: 23px;
+    font-family: var(--script);
+    font-size: 24px;
+    color: #b77b93;
+}
+
+
+/* =========================================
+   RESULT
+========================================= */
+
+.result-section {
+    display: none;
+    padding: 65px 20px;
+    margin-bottom: 70px;
+    text-align: center;
+    border-radius: 22px;
+    background: #f9edf1;
+    border: 1px solid #efdae2;
+}
+
+.result-heading h2 {
+    margin-top: 12px;
+    font-family: var(--serif);
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.result-heading h2 span {
+    color: #ce8ca6;
+}
+
+.result-heading p {
+    margin-top: 9px;
+    color: #9e8490;
+    font-size: 13px;
+}
+
+
+/* Result card */
+
+.result-card {
+    width: min(100%, 480px);
+    margin: 35px auto 0;
+    padding: 25px;
+    background: #fffaf6;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(115, 75, 91, 0.09);
+    position: relative;
+}
+
+.result-ribbon {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    color: #bd8499;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.result-content {
+    padding-top: 10px;
+}
+
+#result-image {
+    display: block;
+    width: min(100%, 360px);
+    height: auto;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0 8px 22px rgba(80, 45, 60, 0.12);
+}
+
+.result-caption {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    font-family: var(--script);
+    font-size: 21px;
+    color: #b17d92;
+}
+
+.result-caption span {
+    font-size: 14px;
+}
+
+.result-buttons {
+    justify-content: center;
+    margin-top: 25px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.page-footer {
+    padding: 35px 0 45px;
+    text-align: center;
+    border-top: 1px solid #efdee3;
+}
+
+.footer-heart {
+    color: #ce8ca6;
+    font-size: 25px;
+}
+
+.page-footer p {
+    margin-top: 9px;
+    font-family: var(--script);
+    font-size: 24px;
+    color: #a77b8e;
+}
+
+.page-footer > span {
+    display: block;
+    margin-top: 8px;
+    color: #b9a2ab;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 850px) {
+
+    .studio-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .studio-note {
+        display: none;
+    }
+
+    .template-preview {
+        height: 210px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        min-height: 65px;
+        padding: 0 5%;
+    }
+
+    .nav-logo {
+        font-size: 15px;
+    }
+
+    .nav-date {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .back-link {
+        font-size: 11px;
+    }
+
+    .page-container {
+        width: 90%;
+    }
+
+    .intro-section {
+        padding: 65px 0 55px;
+    }
+
+    .intro-section h1 {
+        font-size: 55px;
+    }
+
+    .intro-description {
+        font-size: 12px;
+        padding: 0 10px;
+    }
+
+    .template-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .template-preview {
+        height: 200px;
+    }
+
+    .section-heading h2 {
+        font-size: 25px;
+    }
+
+    .camera-card {
+        padding: 11px;
+    }
+
+    .camera-actions {
+        flex-direction: column;
+    }
+
+    .camera-actions .btn {
+        width: 100%;
+    }
+
+    .result-section {
+        padding: 45px 12px;
+    }
+
+    .result-heading h2 {
+        font-size: 27px;
+    }
+
+    .result-card {
+        padding: 17px;
+    }
+
+    .result-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .result-buttons .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+}

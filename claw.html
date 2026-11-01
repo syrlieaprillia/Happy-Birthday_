@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Gacha ♡</title>
+    <link rel="stylesheet" href="claw.css">
+</head>
+<body>
+
+    <main class="game-container">
+
+        <section class="machine">
+            <div class="glass-dome">
+                <div class="glass-shine"></div>
+                <div class="capsule-container" id="capsuleContainer"></div>
+            </div>
+
+            <div class="machine-body">
+                <div class="machine-header">ガチャ 100円</div>
+
+                <div class="lever-area">
+                    <button class="lever-button" id="leverButton"
+                        aria-label="Putar mesin">
+                        <span class="lever-handle"></span>
+                    </button>
+                </div>
+
+                <div class="prize-chute">
+                    <div class="chute-inner" id="prizeChute">
+                        <div class="empty-message" id="emptyMessage">
+                            ♡
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="result-message" id="resultMessage">
+            Putar tuas dan ambil kapsulmu! ♡
+        </div>
+
+        <div class="progress-text">
+            Kapsul terbuka: <span id="openedCount">0</span> / 20
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <a href="home.html" class="back-button">← Back to Home</a>
+    </main>
+
+    <!-- POPUP UCAPAN ULANG TAHUN -->
+    <div class="modal-overlay" id="birthdayModal">
+        <div class="birthday-card">
+            <button class="close-modal" id="closeModal"
+                aria-label="Tutup">×</button>
+
+            <div class="modal-decoration">🎀 ✨ 🎀</div>
+            <div class="modal-capsule" id="modalCapsule">💗</div>
+
+            <p class="modal-number" id="modalNumber">
+                BIRTHDAY SURPRISE #1
+            </p>
+
+            <h2 id="modalTitle">Happy Birthday! 🎂</h2>
+
+            <p class="modal-message" id="modalMessage"></p>
+
+            <div class="modal-decoration">♡ ♡ ♡</div>
+
+            <button class="next-button" id="nextButton">
+                Buka kejutan berikutnya 💌
+            </button>
+        </div>
+    </div>
+
+    <script src="claw.js"></script>
+</body>
+</html>

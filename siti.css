@@ -1,0 +1,605 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --pink: #e9a9c2;
+    --soft-pink: #f8dce8;
+    --light-pink: #fff0f5;
+    --ivory: #fffaf5;
+    --brown: #795765;
+    --dark-brown: #59434e;
+    --muted: #a88b98;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--ivory);
+    color: var(--dark-brown);
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* BACKGROUND DECORATION */
+
+.background-decor {
+    position: fixed;
+    color: #edc1d2;
+    opacity: 0.45;
+    pointer-events: none;
+    z-index: 0;
+    animation: float 5s ease-in-out infinite;
+}
+
+.decor-one {
+    top: 18%;
+    left: 7%;
+    font-size: 38px;
+}
+
+.decor-two {
+    top: 65%;
+    right: 8%;
+    font-size: 45px;
+    animation-delay: 1s;
+}
+
+.decor-three {
+    top: 40%;
+    right: 5%;
+    font-size: 40px;
+    animation-delay: 2s;
+}
+
+.decor-four {
+    bottom: 8%;
+    left: 8%;
+    font-size: 35px;
+    animation-delay: 1.5s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(8deg);
+    }
+}
+
+/* HEADER */
+
+.header {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 28px 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.back-link {
+    text-decoration: none;
+    color: var(--muted);
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.back-link:hover {
+    color: var(--brown);
+}
+
+.header-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-style: italic;
+    color: var(--brown);
+}
+
+.header-logo span {
+    color: #df91b0;
+}
+
+/* MAIN */
+
+.main-container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 35px 35px 30px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* BIRTHDAY HEADING */
+
+.birthday-heading {
+    text-align: center;
+    padding: 30px 15px 45px;
+    position: relative;
+}
+
+.eyebrow {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #c18da3;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.birthday-heading h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(48px, 7vw, 76px);
+    line-height: 1.1;
+    font-weight: 500;
+    color: var(--dark-brown);
+}
+
+.birthday-heading h1 span {
+    color: #d98eac;
+    font-style: italic;
+}
+
+.heading-decoration {
+    color: #dca4ba;
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin: 20px 0;
+}
+
+.birthday-message {
+    color: #9c8490;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.age-badge {
+    width: 75px;
+    height: 75px;
+    background: #f9e1eb;
+    border: 1px solid #edc1d2;
+    border-radius: 50%;
+    margin: 25px auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    transform: rotate(-10deg);
+    box-shadow: 0 5px 15px rgba(181, 125, 151, 0.12);
+}
+
+.age-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: #bd7895;
+}
+
+.age-text {
+    font-size: 6px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.4;
+    color: #a87990;
+}
+
+/* GIFT SECTION */
+
+.gift-section {
+    padding: 20px 0 55px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.section-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 27px;
+    font-weight: 500;
+    color: var(--brown);
+}
+
+.section-heading span {
+    color: #d99ab4;
+    font-size: 19px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #ad929f;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 35px;
+}
+
+/* GIFT CARDS */
+
+.gift-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.gift-card {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #f0dce4;
+    border-radius: 18px;
+    padding: 22px 20px 25px;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    overflow: hidden;
+    transition: 0.35s ease;
+    box-shadow: 0 8px 25px rgba(174, 127, 147, 0.07);
+}
+
+.gift-card:hover {
+    transform: translateY(-9px);
+    box-shadow: 0 16px 35px rgba(174, 127, 147, 0.15);
+    border-color: #e9b8cb;
+}
+
+.gift-number {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #c5a0b0;
+    font-weight: 700;
+}
+
+/* GIFT ILLUSTRATION */
+
+.gift-illustration {
+    height: 190px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 5px 0 12px;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.pink-gift {
+    background: #fff0f5;
+}
+
+.lavender-gift {
+    background: #f4eef9;
+}
+
+.peach-gift {
+    background: #fff0e9;
+}
+
+.gift-box {
+    width: 115px;
+    height: 90px;
+    position: relative;
+    background: #e9a9c2;
+    border-radius: 4px 4px 9px 9px;
+    box-shadow: 0 13px 20px rgba(150, 99, 122, 0.16);
+    transition: 0.4s ease;
+}
+
+.pink-gift .gift-box {
+    background: #e9a9c2;
+}
+
+.lavender-gift .gift-box {
+    background: #c9b3dc;
+}
+
+.peach-gift .gift-box {
+    background: #e9ad99;
+}
+
+.gift-lid {
+    position: absolute;
+    width: 128px;
+    height: 22px;
+    top: -12px;
+    left: -6px;
+    border-radius: 5px;
+    background: #f2bfd2;
+    box-shadow: 0 4px 5px rgba(120, 74, 92, 0.12);
+    transition: 0.4s ease;
+}
+
+.lavender-gift .gift-lid {
+    background: #d8c6e7;
+}
+
+.peach-gift .gift-lid {
+    background: #f2c3b3;
+}
+
+.gift-ribbon.vertical {
+    position: absolute;
+    width: 17px;
+    height: 100%;
+    left: 49px;
+    background: rgba(255, 248, 245, 0.65);
+}
+
+.gift-ribbon.horizontal {
+    position: absolute;
+    height: 13px;
+    width: 100%;
+    top: 34px;
+    background: rgba(255, 248, 245, 0.65);
+}
+
+.gift-bow {
+    position: absolute;
+    width: 45px;
+    height: 28px;
+    top: -32px;
+    left: 35px;
+}
+
+.gift-bow span {
+    position: absolute;
+    width: 23px;
+    height: 18px;
+    border: 5px solid #d78eaa;
+    border-radius: 50% 50% 50% 5px;
+}
+
+.gift-bow span:first-child {
+    left: 0;
+    transform: rotate(25deg);
+}
+
+.gift-bow span:nth-child(2) {
+    right: 0;
+    transform: scaleX(-1) rotate(25deg);
+}
+
+.gift-bow i {
+    width: 12px;
+    height: 12px;
+    background: #d78eaa;
+    border-radius: 50%;
+    position: absolute;
+    left: 16px;
+    top: 8px;
+}
+
+.lavender-gift .gift-bow span,
+.lavender-gift .gift-bow i {
+    border-color: #a78bc0;
+    background: #a78bc0;
+}
+
+.peach-gift .gift-bow span,
+.peach-gift .gift-bow i {
+    border-color: #d28f79;
+    background: #d28f79;
+}
+
+.gift-sparkle {
+    position: absolute;
+    top: 30px;
+    right: 45px;
+    color: #d79bb2;
+    font-size: 23px;
+    animation: sparkle 2s infinite ease-in-out;
+}
+
+.lavender-gift .gift-sparkle {
+    color: #b6a0cc;
+}
+
+.peach-gift .gift-sparkle {
+    color: #d9a18d;
+}
+
+@keyframes sparkle {
+    0%, 100% {
+        opacity: 0.5;
+        transform: scale(0.8) rotate(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2) rotate(15deg);
+    }
+}
+
+.gift-shadow {
+    position: absolute;
+    width: 145px;
+    height: 12px;
+    background: rgba(115, 78, 94, 0.12);
+    border-radius: 50%;
+    bottom: 28px;
+    filter: blur(6px);
+}
+
+.gift-card:hover .gift-box {
+    transform: translateY(-5px) rotate(-2deg);
+}
+
+.gift-card:hover .gift-lid {
+    transform: translateY(-9px) rotate(-8deg);
+}
+
+/* GIFT INFORMATION */
+
+.gift-info {
+    text-align: center;
+    padding: 8px 5px 0;
+}
+
+.gift-label {
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #c59aaa;
+    margin-bottom: 8px;
+}
+
+.gift-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--brown);
+    margin-bottom: 8px;
+}
+
+.gift-info > p:not(.gift-label) {
+    font-size: 11px;
+    line-height: 1.7;
+    color: #a48e99;
+    min-height: 38px;
+}
+
+.open-gift {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin-top: 16px;
+    padding: 9px 17px;
+    background: #f9e5ed;
+    border-radius: 30px;
+    color: #a86f88;
+    font-size: 10px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.gift-card:hover .open-gift {
+    background: #e8b1c8;
+    color: white;
+}
+
+.gift-heart {
+    position: absolute;
+    right: 17px;
+    top: 17px;
+    font-size: 18px;
+    color: #e1a7bd;
+}
+
+/* FOOTER */
+
+.footer {
+    text-align: center;
+    padding: 20px 0 35px;
+    color: #ad929f;
+}
+
+.footer-decoration {
+    font-size: 25px;
+    color: #d99ab4;
+    margin-bottom: 8px;
+}
+
+.footer p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 15px;
+}
+
+.footer span {
+    display: block;
+    margin-top: 8px;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #c49aab;
+    text-transform: uppercase;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+    .gift-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gift-card:last-child {
+        grid-column: 1 / -1;
+        width: calc(50% - 11px);
+        justify-self: center;
+    }
+}
+
+@media (max-width: 550px) {
+    .header {
+        padding: 22px 20px;
+    }
+
+    .header-logo {
+        font-size: 12px;
+    }
+
+    .main-container {
+        padding: 20px 18px;
+    }
+
+    .birthday-heading {
+        padding: 35px 5px;
+    }
+
+    .birthday-heading h1 {
+        font-size: 52px;
+    }
+
+    .section-heading h2 {
+        font-size: 22px;
+    }
+
+    .gift-container {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .gift-card,
+    .gift-card:last-child {
+        width: 100%;
+        grid-column: auto;
+    }
+
+    .gift-illustration {
+        height: 175px;
+    }
+
+    .decor-one {
+        left: 2%;
+    }
+
+    .decor-two {
+        right: 2%;
+    }
+}
+
+.gift-card.gift-opening {
+    transform: scale(0.96);
+    opacity: 0.6;
+    transition: 0.4s ease;
+}
+
+.page-loaded {
+    animation: pageFade 0.8s ease;
+}
+
+@keyframes pageFade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+

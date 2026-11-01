@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hi Pretty ♡</title>
+
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+
+    <!-- Dekorasi -->
+    <div class="decor decor-1">♡</div>
+    <div class="decor decor-2">✦</div>
+    <div class="decor decor-3">♡</div>
+    <div class="decor decor-4">✧</div>
+
+    <!-- Tombol musik -->
+    <button
+        class="music-button"
+        onclick="toggleMusic()"
+        id="musicButton"
+    >
+        ♪
+    </button>
+
+    <!-- MAIN -->
+    <main class="home-container">
+
+        <!-- Tulisan Hi -->
+        <div class="hi-text">
+            Hi
+        </div>
+
+        <!-- Character -->
+        <div class="character-area">
+
+            <div class="sparkle sparkle-1">
+                ✦
+            </div>
+
+            <div class="sparkle sparkle-2">
+                ✧
+            </div>
+
+            <div class="sparkle sparkle-3">
+                ♡
+            </div>
+
+            <div class="character">
+
+                <div class="character-face">
+                    🐱
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Greeting -->
+        <h1>
+            hi, pretty
+            <span>🫶🏻👋🏻</span>
+        </h1>
+
+        <!-- Button menuju CLAW -->
+        <a
+            href="./claw.html"
+            class="tap-button"
+            id="giftButton"
+        >
+            tap disini &lt;3
+        </a>
+
+        <p class="little-message">
+            I have something for you ♡
+        </p>
+
+    </main>
+
+    <!-- Musik -->
+    <audio
+        id="backgroundMusic"
+        loop
+    >
+        <source
+            src="assets/music.mp3"
+            type="audio/mpeg"
+        >
+    </audio>
+
+    <!-- JavaScript -->
+    <script src="home.js"></script>
+
+</body>
+</html>

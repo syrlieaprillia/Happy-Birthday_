@@ -1,0 +1,412 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photobooth — Siti's Special Day</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="photobox.css">
+</head>
+
+<body>
+
+    <div class="background-decoration decoration-one">✿</div>
+    <div class="background-decoration decoration-two">♡</div>
+    <div class="background-decoration decoration-three">✦</div>
+
+    <header class="navbar">
+        <a href="siti.html" class="back-link">
+            <span>←</span> Back to gifts
+        </a>
+
+        <div class="nav-logo">
+            <span>♡</span> Siti's memories
+        </div>
+
+        <div class="nav-date">SPECIAL DAY · 20</div>
+    </header>
+
+
+    <main class="page-container">
+
+        <!-- INTRO -->
+        <section class="intro-section">
+
+            <div class="eyebrow">
+                <span>✦</span>
+                A LITTLE PHOTO STUDIO
+                <span>✦</span>
+            </div>
+
+            <h1>
+                Let's make<br>
+                <em>memories!</em>
+            </h1>
+
+            <p class="intro-description">
+                A little photo booth just for you.
+                Pick your favorite frame, smile, and capture
+                these lovely moments.
+            </p>
+
+            <div class="intro-decoration">୨୧</div>
+
+        </section>
+
+
+        <!-- TEMPLATE SELECTION -->
+        <section class="template-section">
+
+            <div class="section-heading">
+                <div>
+                    <span class="section-label">01 — CHOOSE YOUR STYLE</span>
+                    <h2>Pick your frame</h2>
+                </div>
+
+                <span class="heading-heart">♡</span>
+            </div>
+
+
+            <div class="template-grid">
+
+                <!-- VINTAGE -->
+                <button
+                    class="template-card active"
+                    data-template="classic"
+                    type="button"
+                >
+
+                    <div class="template-preview vintage-preview">
+
+                        <div class="film-holes"></div>
+
+                        <div class="preview-content">
+                            <span class="preview-star">✦</span>
+                            <strong>A LITTLE</strong>
+                            <strong>MOMENT</strong>
+
+                            <div class="preview-photo"></div>
+                            <div class="preview-photo"></div>
+                            <div class="preview-photo"></div>
+
+                            <small>PHOTO DIARY</small>
+                        </div>
+
+                    </div>
+
+                    <div class="template-info">
+                        <div>
+                            <h3>Vintage Film</h3>
+                            <p>Analog memories</p>
+                        </div>
+
+                        <span class="template-number">01</span>
+                    </div>
+
+                </button>
+
+
+                <!-- CHERRY -->
+                <button
+                    class="template-card"
+                    data-template="cherry"
+                    type="button"
+                >
+
+                    <div class="template-preview cherry-preview">
+
+                        <div class="cherry-decoration top-left">🍒</div>
+                        <div class="cherry-decoration top-right">♡</div>
+
+                        <div class="preview-content">
+                            <strong>CHERRY</strong>
+                            <strong>ON TOP</strong>
+
+                            <div class="preview-photo"></div>
+                            <div class="preview-photo"></div>
+                            <div class="preview-photo"></div>
+
+                            <small>SWEET MEMORIES</small>
+                        </div>
+
+                        <div class="cherry-decoration bottom-right">🍒</div>
+
+                    </div>
+
+                    <div class="template-info">
+                        <div>
+                            <h3>Cherry Crush</h3>
+                            <p>Sweet and playful</p>
+                        </div>
+
+                        <span class="template-number">02</span>
+                    </div>
+
+                </button>
+
+
+                <!-- GARDEN -->
+                <button
+                    class="template-card"
+                    data-template="lilac"
+                    type="button"
+                >
+
+                    <div class="template-preview garden-preview">
+
+                        <div class="garden-flower flower-one">✿</div>
+                        <div class="garden-flower flower-two">✿</div>
+
+                        <div class="preview-content">
+                            <strong>SECRET</strong>
+                            <strong>GARDEN</strong>
+
+                            <div class="preview-photo"></div>
+                            <div class="preview-photo"></div>
+                            <div class="preview-photo"></div>
+
+                            <small>BLOOMING MEMORIES</small>
+                        </div>
+
+                        <div class="garden-flower flower-three">✿</div>
+
+                    </div>
+
+                    <div class="template-info">
+                        <div>
+                            <h3>Secret Garden</h3>
+                            <p>Blooming memories</p>
+                        </div>
+
+                        <span class="template-number">03</span>
+                    </div>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- CAMERA SECTION -->
+        <section class="camera-section">
+
+            <div class="section-heading">
+                <div>
+                    <span class="section-label">02 — READY, SET, SMILE</span>
+                    <h2>Strike a pose!</h2>
+                </div>
+
+                <span class="camera-icon">📸</span>
+            </div>
+
+
+            <div class="studio-layout">
+
+                <div class="camera-card">
+
+                    <div class="camera-topbar">
+                        <div class="camera-live">
+                            <span class="live-dot"></span>
+                            LIVE CAMERA
+                        </div>
+
+                        <span class="camera-counter">03 SHOTS</span>
+                    </div>
+
+
+                    <div class="camera-view">
+
+                        <video
+                            id="camera"
+                            autoplay
+                            playsinline
+                            muted
+                        ></video>
+
+                        <div id="camera-placeholder" class="camera-placeholder">
+
+                            <div class="placeholder-camera">📷</div>
+
+                            <h3>Your camera goes here</h3>
+
+                            <p>
+                                Start the camera to see your pretty face!
+                            </p>
+
+                        </div>
+
+                        <div class="camera-corner corner-tl"></div>
+                        <div class="camera-corner corner-tr"></div>
+                        <div class="camera-corner corner-bl"></div>
+                        <div class="camera-corner corner-br"></div>
+
+                        <div id="countdown" class="countdown"></div>
+
+                        <div id="flash" class="flash"></div>
+
+                    </div>
+
+
+                    <div class="camera-bottom">
+
+                        <p id="camera-status">
+                            Camera is not connected
+                        </p>
+
+                        <p id="camera-hint">
+                            Make sure your camera permission is enabled.
+                        </p>
+
+                    </div>
+
+
+                    <div class="camera-actions">
+
+                        <button
+                            id="start-camera"
+                            class="btn btn-secondary"
+                            type="button"
+                        >
+                            <span>◎</span>
+                            Start Camera
+                        </button>
+
+                        <button
+                            id="take-photo"
+                            class="btn btn-primary"
+                            type="button"
+                            disabled
+                        >
+                            <span>♡</span>
+                            Take 3 Photos
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <aside class="studio-note">
+
+                    <div class="note-sticker">୨୧</div>
+
+                    <span class="section-label">A LITTLE REMINDER</span>
+
+                    <h3>Just be<br><em>yourself!</em></h3>
+
+                    <p>
+                        No need to be perfect. The best memories
+                        come from the silliest smiles and happiest moments.
+                    </p>
+
+                    <div class="note-divider"></div>
+
+                    <div class="shot-guide">
+
+                        <div class="shot-item">
+                            <span>01</span>
+                            <p>First smile</p>
+                        </div>
+
+                        <div class="shot-item">
+                            <span>02</span>
+                            <p>Little pose</p>
+                        </div>
+
+                        <div class="shot-item">
+                            <span>03</span>
+                            <p>Big smile!</p>
+                        </div>
+
+                    </div>
+
+                    <div class="note-signature">
+                        with love, ♡
+                    </div>
+
+                </aside>
+
+            </div>
+
+            <p id="capture-status" class="capture-status">
+                Choose your favorite frame ♡
+            </p>
+
+        </section>
+
+
+        <!-- RESULT -->
+        <section id="result-section" class="result-section">
+
+            <div class="result-heading">
+                <span class="section-label">03 — YOUR LITTLE MASTERPIECE</span>
+
+                <h2>Look what we made! <span>♡</span></h2>
+
+                <p>Your memories are ready to keep.</p>
+            </div>
+
+
+            <div class="result-card">
+
+                <div class="result-ribbon">
+                    MADE WITH LOVE
+                </div>
+
+                <div id="result-content" class="result-content"></div>
+
+                <div class="result-caption">
+                    <span>✦</span>
+                    A memory worth keeping
+                    <span>✦</span>
+                </div>
+
+            </div>
+
+
+            <div id="result-buttons" class="result-buttons">
+
+                <button
+                    id="download-photo"
+                    class="btn btn-primary"
+                    type="button"
+                >
+                    ↓ Download Photo
+                </button>
+
+                <button
+                    id="retake-photo"
+                    class="btn btn-secondary"
+                    type="button"
+                >
+                    ↻ Take Again
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer class="page-footer">
+            <div class="footer-heart">♡</div>
+
+            <p>Made with love, just for Siti.</p>
+
+            <span>KEEP THIS LITTLE MOMENT FOREVER</span>
+        </footer>
+
+    </main>
+
+
+    <script src="photobox.js"></script>
+
+</body>
+</html>

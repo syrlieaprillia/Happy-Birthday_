@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Memories ♡</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="memori.css">
+</head>
+<body>
+
+    <div class="decoration deco-one">♡</div>
+    <div class="decoration deco-two">✿</div>
+    <div class="decoration deco-three">୨୧</div>
+    <div class="decoration deco-four">♡</div>
+
+    <main class="scrapbook">
+
+        <a href="siti.html" class="back-button">← Back to home</a>
+
+        <header class="hero">
+            <span class="eyebrow">A LITTLE BOOK OF US</span>
+            <h1>Our <span>Memories</span></h1>
+            <p>A little collection of moments that will always have a place in my heart.</p>
+            <div class="floral-divider">───── ♡ ─────</div>
+            <span class="photo-count">20 little moments · endless memories</span>
+        </header>
+
+        <section class="memory-grid" id="memory-grid">
+            <!-- Foto akan dimasukkan otomatis melalui JavaScript -->
+        </section>
+
+        <footer class="footer">
+            <div>Made with love ♡</div>
+            <p>Some moments are simply too precious to forget.</p>
+        </footer>
+
+    </main>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+        <button class="close-lightbox" id="close-lightbox">&times;</button>
+        <button class="nav-button prev-button" id="prev-button">‹</button>
+
+        <div class="lightbox-content">
+            <div class="lightbox-photo">
+                <img src="" alt="Memory photo" id="lightbox-image">
+            </div>
+            <p id="lightbox-caption"></p>
+            <span id="lightbox-counter"></span>
+        </div>
+
+        <button class="nav-button next-button" id="next-button">›</button>
+    </div>
+
+    <script src="memori.js"></script>
+</body>
+</html>

@@ -1,0 +1,643 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: 'Quicksand', sans-serif;
+    background:
+        radial-gradient(circle at 50% 45%, #fffafd 0%, #ffeaf3 55%, #fbd4e5 100%);
+    color: #bd7895;
+}
+
+.background {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.background span {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 25px;
+    animation: float 7s ease-in-out infinite;
+}
+
+.background span:nth-child(1) { top: 12%; left: 8%; }
+.background span:nth-child(2) { top: 25%; left: 88%; animation-delay: 1s; }
+.background span:nth-child(3) { top: 70%; left: 10%; animation-delay: 2s; }
+.background span:nth-child(4) { top: 62%; left: 90%; animation-delay: 3s; }
+.background span:nth-child(5) { top: 85%; left: 28%; animation-delay: 1.5s; }
+.background span:nth-child(6) { top: 10%; left: 72%; animation-delay: 2.5s; }
+.background span:nth-child(7) { top: 45%; left: 4%; animation-delay: 3.5s; }
+.background span:nth-child(8) { top: 90%; left: 78%; animation-delay: 2s; }
+.background span:nth-child(9) { top: 38%; left: 95%; animation-delay: 1s; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0); }
+    50% { transform: translateY(-18px) rotate(12deg); }
+}
+
+.birthday-container {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    padding: 35px 15px 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.eyebrow {
+    font-size: 11px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    color: #d28ca9;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(35px, 6vw, 55px);
+    color: #d879a2;
+    text-shadow: 0 4px 12px rgba(215, 117, 158, 0.16);
+}
+
+.subtitle {
+    margin-top: 8px;
+    font-size: 17px;
+    color: #c1839c;
+}
+
+.cake-scene {
+    position: relative;
+    width: min(100%, 650px);
+    height: 550px;
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.cake-shadow {
+    position: absolute;
+    width: 76%;
+    height: 20px;
+    bottom: 13px;
+    left: 12%;
+    background: rgba(119, 75, 91, 0.17);
+    filter: blur(12px);
+    border-radius: 50%;
+}
+
+.cake-display {
+    position: relative;
+    width: 600px;
+    max-width: 100%;
+    height: 530px;
+    transform-origin: 50% 90%;
+    z-index: 2;
+}
+
+/* =========================
+   PIRING
+========================= */
+
+.cake-plate {
+    position: absolute;
+    width: 83%;
+    height: 34px;
+    left: 8.5%;
+    bottom: 12px;
+    border-radius: 50%;
+    background: linear-gradient(
+        to bottom,
+        #ffffff 0%,
+        #d9d9d5 40%,
+        #999c99 75%,
+        #e8e8e4 100%
+    );
+    border: 2px solid #aaa9a5;
+    box-shadow:
+        0 8px 12px rgba(80, 65, 70, 0.2),
+        inset 0 3px 5px #fff;
+    z-index: 1;
+}
+
+.plate-shine {
+    position: absolute;
+    top: 5px;
+    left: 8%;
+    width: 84%;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* =========================
+   KUE TINGKAT BAWAH
+========================= */
+
+.lower-tier {
+    position: absolute;
+    width: 435px;
+    height: 230px;
+    left: 50%;
+    bottom: 35px;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+
+.lower-top {
+    position: absolute;
+    width: 100%;
+    height: 58px;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    background: linear-gradient(
+        180deg,
+        #ffb2d1 0%,
+        #ff80b5 60%,
+        #f56da6 100%
+    );
+    box-shadow:
+        inset 0 5px 8px rgba(255, 255, 255, 0.45),
+        0 5px 9px rgba(207, 100, 147, 0.15);
+    z-index: 4;
+}
+
+.lower-body {
+    position: absolute;
+    top: 27px;
+    left: 0;
+    width: 100%;
+    height: 203px;
+    overflow: hidden;
+    border-radius: 0 0 35px 35px;
+    background: repeating-linear-gradient(
+        to bottom,
+        #f8c9df 0px,
+        #f8c9df 24px,
+        #e9b8d3 25px,
+        #e9b8d3 32px,
+        #f8c9df 33px,
+        #f8c9df 50px
+    );
+    box-shadow:
+        inset 7px 0 12px rgba(255, 255, 255, 0.35),
+        inset -7px 0 12px rgba(193, 107, 151, 0.12),
+        0 8px 12px rgba(190, 113, 153, 0.15);
+    z-index: 2;
+}
+
+/* Cream drips on lower tier */
+.lower-body .drip {
+    position: absolute;
+    top: -2px;
+    width: 37px;
+    height: 48px;
+    border-radius: 0 0 22px 22px;
+    background: linear-gradient(90deg, #f56ca5, #ff9cc5, #f66da6);
+    box-shadow: inset 3px 0 4px rgba(255,255,255,0.25);
+    z-index: 3;
+}
+
+.l1 { left: 5%; height: 49px !important; }
+.l2 { left: 18%; height: 68px !important; }
+.l3 { left: 33%; height: 44px !important; }
+.l4 { left: 48%; height: 72px !important; }
+.l5 { left: 63%; height: 48px !important; }
+.l6 { left: 78%; height: 67px !important; }
+.l7 { left: 92%; height: 43px !important; }
+
+.age-decoration {
+    position: absolute;
+    top: 82px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 5;
+}
+
+.age-decoration span {
+    display: inline-block;
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 700;
+    color: #fff9fc;
+    -webkit-text-stroke: 1px #e58bad;
+    text-shadow:
+        2px 4px 4px rgba(151, 77, 112, 0.35),
+        0 0 5px #fff;
+}
+
+.age-decoration small {
+    display: block;
+    margin-top: -7px;
+    color: #fff3fa;
+    font-size: 19px;
+}
+
+.lower-decoration {
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #dc8eaf;
+    font-size: 23px;
+    z-index: 5;
+}
+
+.lower-piping {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    height: 7px;
+    border-top: 3px dotted #efa6c5;
+    border-bottom: 2px dotted #f4b9d2;
+    z-index: 5;
+}
+
+/* =========================
+   KUE TINGKAT ATAS
+   BAGIAN INI MENEMPEL KE KUE BAWAH
+========================= */
+
+.upper-tier {
+    position: absolute;
+    width: 285px;
+    height: 185px;
+    left: 50%;
+    bottom: 265px;
+    transform: translateX(-50%);
+    z-index: 6;
+}
+
+.upper-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 54px;
+    border-radius: 50%;
+    background: linear-gradient(
+        180deg,
+        #ffb5d4 0%,
+        #ff82b6 65%,
+        #f36ca5 100%
+    );
+    box-shadow:
+        inset 0 5px 8px rgba(255,255,255,0.5),
+        0 4px 7px rgba(196, 96, 143, 0.13);
+    z-index: 5;
+}
+
+.upper-body {
+    position: absolute;
+    top: 27px;
+    left: 0;
+    width: 100%;
+    height: 158px;
+    overflow: hidden;
+    border-radius: 0 0 33px 33px;
+    background: repeating-linear-gradient(
+        to bottom,
+        #d9b8dc 0px,
+        #d9b8dc 23px,
+        #cba6d0 24px,
+        #cba6d0 31px,
+        #d9b8dc 32px,
+        #d9b8dc 48px
+    );
+    box-shadow:
+        inset 6px 0 10px rgba(255,255,255,0.3),
+        inset -6px 0 10px rgba(128, 77, 139, 0.12);
+    z-index: 4;
+}
+
+.upper-body .drip {
+    position: absolute;
+    top: -2px;
+    width: 29px;
+    height: 42px;
+    border-radius: 0 0 18px 18px;
+    background: linear-gradient(90deg, #f56ca5, #ff9fc7, #f56ca5);
+    z-index: 3;
+}
+
+.u1 { left: 9%; height: 43px !important; }
+.u2 { left: 29%; height: 61px !important; }
+.u3 { left: 48%; height: 42px !important; }
+.u4 { left: 68%; height: 60px !important; }
+.u5 { left: 87%; height: 44px !important; }
+
+.upper-decoration {
+    position: absolute;
+    top: 86px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #fff0fa;
+    font-size: 24px;
+    text-shadow: 0 2px 3px rgba(147, 91, 145, 0.2);
+    z-index: 5;
+}
+
+.upper-piping {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    height: 7px;
+    border-top: 3px dotted #f2a9c9;
+    border-bottom: 2px dotted #f5c3d9;
+    z-index: 5;
+}
+
+.berry {
+    position: absolute;
+    top: 37px;
+    font-size: 20px;
+    z-index: 7;
+}
+
+.berry1 { left: 15%; }
+.berry2 { left: 47%; top: 51px; }
+.berry3 { right: 15%; }
+
+/* =========================
+   LILIN
+========================= */
+
+.top-candles {
+    position: absolute;
+    top: -112px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    z-index: 10;
+}
+
+.candle {
+    position: relative;
+    width: 24px;
+    height: 112px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.candle:focus {
+    outline: none;
+}
+
+.stick {
+    position: absolute;
+    bottom: 0;
+    left: 4px;
+    width: 17px;
+    height: 75px;
+    border-radius: 4px 4px 2px 2px;
+    background: repeating-linear-gradient(
+        135deg,
+        #ffffff 0px,
+        #ffffff 9px,
+        #4778d9 10px,
+        #4778d9 16px
+    );
+    box-shadow:
+        inset 2px 0 3px rgba(255,255,255,0.8),
+        2px 2px 4px rgba(90, 75, 100, 0.15);
+}
+
+.c2 .stick,
+.c4 .stick {
+    background: repeating-linear-gradient(
+        135deg,
+        #ffffff 0px,
+        #ffffff 9px,
+        #ed609b 10px,
+        #ed609b 16px
+    );
+}
+
+.c3 .stick {
+    background: repeating-linear-gradient(
+        135deg,
+        #ffffff 0px,
+        #ffffff 9px,
+        #45a7bd 10px,
+        #45a7bd 16px
+    );
+}
+
+.wick {
+    position: absolute;
+    bottom: 74px;
+    left: 11px;
+    width: 2px;
+    height: 9px;
+    background: #55434a;
+    z-index: 2;
+}
+
+.flame {
+    position: absolute;
+    bottom: 82px;
+    left: 3px;
+    width: 18px;
+    height: 31px;
+    border-radius: 50% 50% 45% 45%;
+    background: radial-gradient(
+        ellipse at 50% 70%,
+        #fff8a7 0%,
+        #ffd34d 38%,
+        #ff9d36 72%,
+        #ff713c 100%
+    );
+    box-shadow:
+        0 0 9px 4px rgba(255, 173, 61, 0.5),
+        0 0 20px 8px rgba(255, 174, 68, 0.25);
+    transform-origin: 50% 90%;
+    animation: flameFlicker 0.7s ease-in-out infinite alternate;
+    z-index: 3;
+}
+
+@keyframes flameFlicker {
+    from { transform: rotate(-5deg) scale(0.96); }
+    to { transform: rotate(5deg) scale(1.06); }
+}
+
+.candle.extinguished .flame {
+    opacity: 0;
+    transform: scale(0);
+    animation: none;
+}
+
+.candle.extinguished .wick {
+    background: #777;
+}
+
+.smoke {
+    position: absolute;
+    bottom: 105px;
+    left: 3px;
+    font-size: 23px;
+    color: rgba(150, 150, 150, 0.65);
+    animation: smokeUp 1s ease-out forwards;
+    pointer-events: none;
+}
+
+@keyframes smokeUp {
+    from {
+        opacity: 0.8;
+        transform: translateY(0) scale(0.7);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-35px) scale(1.5);
+    }
+}
+
+/* =========================
+   ANIMASI KUE
+========================= */
+
+.cake-display.dancing {
+    animation: cakeDance 0.8s ease-in-out infinite;
+}
+
+@keyframes cakeDance {
+    0% { transform: rotate(-1.2deg) translateY(0); }
+    25% { transform: rotate(1.2deg) translateY(-3px); }
+    50% { transform: rotate(-1deg) translateY(1px); }
+    75% { transform: rotate(1deg) translateY(-2px); }
+    100% { transform: rotate(-1.2deg) translateY(0); }
+}
+
+/* =========================
+   TEKS
+========================= */
+
+.instruction {
+    margin-top: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #c77f9e;
+    min-height: 24px;
+}
+
+.candle-hint {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #c995aa;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+    .birthday-container {
+        padding-top: 25px;
+    }
+
+    .cake-scene {
+        height: 440px;
+        margin-top: 20px;
+    }
+
+    .cake-display {
+        transform: scale(0.78);
+        transform-origin: 50% 90%;
+        width: 600px;
+        max-width: none;
+        flex-shrink: 0;
+    }
+
+    .cake-display.dancing {
+        animation: cakeDanceMobile 0.25s ease-in-out infinite;
+    }
+
+    @keyframes cakeDanceMobile {
+        0% { transform: scale(0.78) rotate(-1.2deg) translateY(0); }
+        25% { transform: scale(0.78) rotate(1.2deg) translateY(-3px); }
+        50% { transform: scale(0.78) rotate(-1deg) translateY(1px); }
+        75% { transform: scale(0.78) rotate(1deg) translateY(-2px); }
+        100% { transform: scale(0.78) rotate(-1.2deg) translateY(0); }
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .subtitle {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 380px) {
+    .cake-display {
+        transform: scale(0.65);
+    }
+
+    .cake-display.dancing {
+        animation: cakeDanceSmall 0.25s ease-in-out infinite;
+    }
+
+    @keyframes cakeDanceSmall {
+        0% { transform: scale(0.65) rotate(-1deg); }
+        50% { transform: scale(0.65) rotate(1deg) translateY(-2px); }
+        100% { transform: scale(0.65) rotate(-1deg); }
+    }
+}
+/* FIX POSISI LILIN */
+.top-candles {
+    top: -27px !important;
+    left: 50% !important;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+/* FIX POSISI KUE ATAS */
+.upper-tier {
+    bottom: 260px !important;
+    z-index: 6;
+}
+
+/* FIX POSISI KUE BAWAH */
+.lower-tier {
+    bottom: 35px !important;
+    z-index: 3;
+}
+
+/* PASTIKAN KUE TIDAK TERPISAH */
+.upper-body {
+    border-radius: 0 0 30px 30px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .top-candles {
+        top: -27px !important;
+    }
+}

@@ -1,0 +1,949 @@
+/* =====================================
+   RESET
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =====================================
+   BODY
+===================================== */
+
+body {
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #fffdf8 0%,
+            #fff6eb 50%,
+            #f9e4d8 100%
+        );
+
+    color: #8f172b;
+
+    font-family:
+        "Trebuchet MS",
+        Arial,
+        sans-serif;
+
+    overflow-x: hidden;
+}
+
+
+/* =====================================
+   PAGE
+===================================== */
+
+.page {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    padding:
+        45px
+        20px
+        60px;
+
+    position: relative;
+}
+
+
+/* =====================================
+   DECORATION
+===================================== */
+
+.decor {
+
+    position: fixed;
+
+    color: #c52d4b;
+
+    font-size: 22px;
+
+    pointer-events: none;
+
+    animation:
+        floating 3s ease-in-out infinite;
+}
+
+
+.decor-1 {
+    top: 35px;
+    left: 12%;
+}
+
+
+.decor-2 {
+    top: 25px;
+    right: 15%;
+
+    animation-delay: .5s;
+}
+
+
+.decor-3 {
+    top: 90px;
+    right: 8%;
+
+    animation-delay: 1s;
+}
+
+
+.decor-4 {
+    bottom: 15%;
+    left: 8%;
+
+    animation-delay: 1.5s;
+}
+
+
+@keyframes floating {
+
+    0%,
+    100% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+    }
+
+    50% {
+        transform:
+            translateY(-9px)
+            rotate(10deg);
+    }
+}
+
+
+/* =====================================
+   INTRO
+===================================== */
+
+.intro {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+    animation:
+        fadeDown .8s ease;
+}
+
+
+.tiny-text {
+
+    font-size: 13px;
+
+    color: #c47782;
+
+    margin-bottom: 8px;
+
+    letter-spacing: 1px;
+}
+
+
+.intro h1 {
+
+    font-size:
+        clamp(
+            36px,
+            7vw,
+            58px
+        );
+
+    color: #a51d37;
+
+    font-weight: 800;
+
+    margin-bottom: 10px;
+}
+
+
+.subtitle {
+
+    font-size: 15px;
+
+    color: #b55b68;
+}
+
+
+/* =====================================
+   PACKAGE AREA
+===================================== */
+
+.package-area {
+
+    width: 100%;
+
+    max-width: 430px;
+
+    display: flex;
+
+    justify-content: center;
+
+    position: relative;
+
+    margin-top: 10px;
+}
+
+
+/* =====================================
+   SHADOW
+===================================== */
+
+.package-shadow {
+
+    position: absolute;
+
+    bottom: -8px;
+
+    width: 310px;
+
+    height: 35px;
+
+    background:
+        rgba(
+            105,
+            25,
+            40,
+            .18
+        );
+
+    filter:
+        blur(12px);
+
+    border-radius: 50%;
+}
+
+
+/* =====================================
+   PACKAGE
+===================================== */
+
+.package {
+
+    width: 350px;
+
+    height: 285px;
+
+    position: relative;
+
+    cursor: pointer;
+
+    transform:
+        rotate(-1deg);
+
+    transition:
+        transform .3s ease;
+
+    z-index: 3;
+}
+
+
+.package:hover {
+
+    transform:
+        rotate(1deg)
+        translateY(-7px);
+}
+
+
+/* =====================================
+   BOX BODY
+===================================== */
+
+.box-body {
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 245px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #d99a5b,
+            #c27b3e
+        );
+
+    border:
+        3px solid #a96035;
+
+    border-radius:
+        5px 5px 14px 14px;
+
+    box-shadow:
+        0 12px 25px
+        rgba(
+            113,
+            35,
+            25,
+            .2
+        );
+}
+
+
+/* =====================================
+   BOX TOP
+===================================== */
+
+.box-top {
+
+    position: absolute;
+
+    z-index: 5;
+
+    top: 20px;
+    left: -8px;
+
+    width:
+        calc(100% + 16px);
+
+    height: 70px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #e7ad6e,
+            #ce8848
+        );
+
+    border:
+        3px solid #a96035;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 5px 0
+        rgba(
+            117,
+            54,
+            28,
+            .25
+        );
+
+    transition:
+        transform .8s ease;
+}
+
+
+/* =====================================
+   TAPE
+===================================== */
+
+.tape {
+
+    position: absolute;
+
+    left: 50%;
+    top: 0;
+
+    transform:
+        translateX(-50%);
+
+    width: 72px;
+    height: 100%;
+
+    background:
+        rgba(
+            255,
+            222,
+            166,
+            .75
+        );
+
+    border-left:
+        2px solid
+        rgba(
+            170,
+            115,
+            60,
+            .3
+        );
+
+    border-right:
+        2px solid
+        rgba(
+            170,
+            115,
+            60,
+            .3
+        );
+}
+
+
+/* =====================================
+   LABEL
+===================================== */
+
+.package-label {
+
+    position: absolute;
+
+    width: 285px;
+
+    left: 50%;
+    top: 45px;
+
+    transform:
+        translateX(-50%)
+        rotate(-1deg);
+
+    background:
+        #fffdf8;
+
+    border:
+        2px solid #302727;
+
+    box-shadow:
+        4px 5px 0
+        rgba(
+            70,
+            40,
+            30,
+            .35
+        );
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    color:
+        #302525;
+
+    z-index: 2;
+}
+
+
+/* =====================================
+   LABEL TITLE
+===================================== */
+
+.label-title {
+
+    background:
+        #292323;
+
+    color:
+        white;
+
+    text-align:
+        center;
+
+    font-size:
+        17px;
+
+    font-weight:
+        bold;
+
+    padding:
+        9px 4px;
+
+    letter-spacing:
+        1px;
+}
+
+
+/* =====================================
+   LABEL CONTENT
+===================================== */
+
+.label-content {
+
+    padding:
+        12px 15px 14px;
+}
+
+
+.label-content p {
+
+    margin:
+        6px 0;
+
+    font-size:
+        12px;
+}
+
+
+/* =====================================
+   DIVIDER
+===================================== */
+
+.divider {
+
+    border-top:
+        2px dashed #555;
+
+    margin:
+        11px 0;
+}
+
+
+/* =====================================
+   RESI TITLE
+===================================== */
+
+.resi-title {
+
+    text-align:
+        center;
+
+    font-size:
+        10px;
+
+    font-weight:
+        bold;
+
+    letter-spacing:
+        2px;
+}
+
+
+/* =====================================
+   BARCODE
+===================================== */
+
+.barcode-wrapper {
+
+    background:
+        white;
+
+    padding:
+        10px 8px 7px;
+
+    margin-top:
+        7px;
+
+    text-align:
+        center;
+}
+
+
+.barcode {
+
+    height:
+        52px;
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        stretch;
+
+    gap:
+        2px;
+
+    overflow:
+        hidden;
+}
+
+
+.barcode span {
+
+    display:
+        block;
+
+    width:
+        3px;
+
+    height:
+        100%;
+
+    background:
+        #111;
+}
+
+
+.barcode span:nth-child(2n) {
+    width: 2px;
+}
+
+
+.barcode span:nth-child(3n) {
+    width: 5px;
+}
+
+
+.barcode span:nth-child(5n) {
+    width: 2px;
+}
+
+
+.barcode span:nth-child(7n) {
+    width: 4px;
+}
+
+
+/* =====================================
+   BARCODE NUMBER
+===================================== */
+
+.barcode-number {
+
+    margin-top:
+        6px;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size:
+        15px;
+
+    letter-spacing:
+        2px;
+
+    color:
+        #111;
+
+    white-space:
+        nowrap;
+}
+
+
+/* =====================================
+   SMALL TEXT
+===================================== */
+
+.small-text {
+
+    text-align:
+        center;
+
+    font-size:
+        8px;
+
+    letter-spacing:
+        2px;
+
+    color:
+        #a51d2d;
+
+    margin-top:
+        7px;
+}
+
+
+/* =====================================
+   HEART
+===================================== */
+
+.heart-sticker {
+
+    position: absolute;
+
+    right: 35px;
+    bottom: 25px;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background:
+        #c72c49;
+
+    color:
+        white;
+
+    border-radius:
+        50%;
+
+    font-size:
+        25px;
+
+    transform:
+        rotate(10deg);
+
+    box-shadow:
+        2px 4px 0
+        rgba(
+            100,
+            20,
+            35,
+            .25
+        );
+}
+
+
+/* =====================================
+   RIBBON
+===================================== */
+
+.ribbon {
+
+    position: absolute;
+
+    width: 35px;
+    height: 75px;
+
+    background:
+        #b5223d;
+
+    z-index: 4;
+
+    top: 75px;
+}
+
+
+.ribbon-left {
+
+    left: 50px;
+
+    transform:
+        rotate(18deg);
+}
+
+
+.ribbon-right {
+
+    right: 50px;
+
+    transform:
+        rotate(-18deg);
+}
+
+
+/* =====================================
+   INSTRUCTION
+===================================== */
+
+.instruction {
+
+    margin-top:
+        28px;
+
+    padding:
+        11px 20px;
+
+    background:
+        #fff;
+
+    border:
+        1.5px solid #e3a3ad;
+
+    border-radius:
+        30px;
+
+    color:
+        #a51d37;
+
+    font-size:
+        14px;
+
+    box-shadow:
+        0 5px 15px
+        rgba(
+            120,
+            30,
+            50,
+            .08
+        );
+
+    animation:
+        pulse 1.8s infinite;
+}
+
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform:
+            scale(1);
+    }
+
+    50% {
+        transform:
+            scale(1.04);
+    }
+}
+
+
+/* =====================================
+   MESSAGE
+===================================== */
+
+.opening-message {
+
+    margin-top:
+        15px;
+
+    color:
+        #b45a68;
+
+    font-size:
+        13px;
+
+    opacity:
+        .8;
+}
+
+
+/* =====================================
+   OPENING
+===================================== */
+
+.package.opening {
+
+    animation:
+        packageShake .6s ease;
+}
+
+
+.package.opening .box-top {
+
+    transform:
+        translateY(-80px)
+        rotate(-5deg);
+}
+
+
+.package.opening .box-body {
+
+    animation:
+        glow .8s ease;
+}
+
+
+@keyframes packageShake {
+
+    0% {
+        transform:
+            rotate(-1deg);
+    }
+
+    25% {
+        transform:
+            rotate(2deg)
+            translateX(-4px);
+    }
+
+    50% {
+        transform:
+            rotate(-2deg)
+            translateX(4px);
+    }
+
+    75% {
+        transform:
+            rotate(1deg);
+    }
+
+    100% {
+        transform:
+            rotate(0);
+    }
+}
+
+
+@keyframes glow {
+
+    0% {
+        box-shadow:
+            0 12px 25px
+            rgba(
+                113,
+                35,
+                25,
+                .2
+            );
+    }
+
+    50% {
+        box-shadow:
+            0 0 45px
+            rgba(
+                255,
+                190,
+                100,
+                .7
+            );
+    }
+
+    100% {
+        box-shadow:
+            0 12px 25px
+            rgba(
+                113,
+                35,
+                25,
+                .2
+            );
+    }
+}
+
+
+/* =====================================
+   FADE
+===================================== */
+
+@keyframes fadeDown {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 500px) {
+
+    .page {
+        padding-top:
+            30px;
+    }
+
+    .package {
+
+        width: 330px;
+
+        transform:
+            scale(.92);
+    }
+
+    .package:hover {
+
+        transform:
+            scale(.92)
+            translateY(-5px);
+    }
+
+    .intro h1 {
+
+        font-size:
+            38px;
+    }
+}

@@ -1,0 +1,337 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fff8f5;
+    color: #795d61;
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.scrapbook {
+    max-width: 1150px;
+    margin: auto;
+    padding: 35px 35px 60px;
+    position: relative;
+}
+
+.back-button {
+    display: inline-block;
+    text-decoration: none;
+    color: #a16e7d;
+    background: #fff;
+    border: 1px solid #f3dce1;
+    border-radius: 30px;
+    padding: 10px 19px;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.back-button:hover {
+    background: #f8e2e8;
+    transform: translateX(-4px);
+}
+
+.hero {
+    text-align: center;
+    padding: 55px 15px 45px;
+}
+
+.eyebrow {
+    color: #c28c9c;
+    font-size: 10px;
+    letter-spacing: 4px;
+    font-weight: 700;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(48px, 8vw, 76px);
+    font-weight: 500;
+    color: #8c606b;
+    margin: 14px 0;
+}
+
+.hero h1 span {
+    color: #d394a7;
+    font-style: italic;
+}
+
+.hero p {
+    color: #a7868a;
+    font-size: 13px;
+    line-height: 1.8;
+    max-width: 400px;
+    margin: auto;
+}
+
+.floral-divider {
+    color: #d69cab;
+    margin: 25px 0 13px;
+    font-size: 15px;
+}
+
+.photo-count {
+    font-family: 'Caveat', cursive;
+    color: #bd8495;
+    font-size: 20px;
+}
+
+/* PHOTO GRID */
+
+.memory-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px 25px;
+    padding: 15px 5px;
+}
+
+.memory-card {
+    background: #fff;
+    padding: 11px 11px 17px;
+    border: 1px solid #f0e3df;
+    box-shadow: 0 7px 18px rgba(147, 101, 109, 0.12);
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+.memory-card:nth-child(4n + 1) {
+    transform: rotate(-3deg);
+}
+
+.memory-card:nth-child(4n + 2) {
+    transform: rotate(2.5deg);
+    margin-top: 18px;
+}
+
+.memory-card:nth-child(4n + 3) {
+    transform: rotate(-1.5deg);
+}
+
+.memory-card:nth-child(4n) {
+    transform: rotate(3deg);
+    margin-top: 13px;
+}
+
+.memory-card:hover {
+    transform: translateY(-9px) rotate(0deg) scale(1.04);
+    z-index: 2;
+    box-shadow: 0 15px 30px rgba(147, 101, 109, 0.2);
+}
+
+.memory-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 4.5;
+    object-fit: cover;
+    background: #f9e9e9;
+}
+
+.memory-caption {
+    font-family: 'Caveat', cursive;
+    font-size: 21px;
+    text-align: center;
+    color: #a87883;
+    padding-top: 10px;
+}
+
+/* DECORATIONS */
+
+.decoration {
+    position: fixed;
+    color: #e5b2bd;
+    pointer-events: none;
+    opacity: 0.55;
+    z-index: -1;
+}
+
+.deco-one {
+    top: 15%;
+    left: 5%;
+    font-size: 35px;
+}
+
+.deco-two {
+    top: 38%;
+    right: 5%;
+    font-size: 40px;
+}
+
+.deco-three {
+    bottom: 15%;
+    left: 6%;
+    font-size: 38px;
+}
+
+.deco-four {
+    bottom: 10%;
+    right: 8%;
+    font-size: 30px;
+}
+
+/* FOOTER */
+
+.footer {
+    text-align: center;
+    padding-top: 65px;
+    color: #c18c9a;
+}
+
+.footer div {
+    font-family: 'Caveat', cursive;
+    font-size: 25px;
+}
+
+.footer p {
+    font-size: 11px;
+    margin-top: 7px;
+}
+
+/* LIGHTBOX */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(54, 37, 43, 0.88);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    padding: 25px;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-content {
+    text-align: center;
+    max-width: 450px;
+    width: 75%;
+}
+
+.lightbox-photo {
+    background: white;
+    padding: 13px 13px 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+.lightbox-photo img {
+    display: block;
+    width: 100%;
+    max-height: 65vh;
+    object-fit: contain;
+    background: #f9e9e9;
+}
+
+#lightbox-caption {
+    font-family: 'Caveat', cursive;
+    color: white;
+    font-size: 26px;
+    margin-top: 15px;
+}
+
+#lightbox-counter {
+    display: block;
+    color: #f1cbd5;
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 20px;
+    right: 28px;
+    border: none;
+    background: none;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 1px solid rgba(255,255,255,0.4);
+    background: rgba(255,255,255,0.15);
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 32px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-button:hover {
+    background: #d99bab;
+}
+
+.prev-button {
+    left: 6%;
+}
+
+.next-button {
+    right: 6%;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+    .memory-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px 17px;
+    }
+
+    .scrapbook {
+        padding: 25px 20px 45px;
+    }
+}
+
+@media (max-width: 520px) {
+    .memory-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 23px 15px;
+    }
+
+    .hero {
+        padding: 45px 5px 35px;
+    }
+
+    .hero p {
+        font-size: 12px;
+    }
+
+    .memory-card {
+        padding: 8px 8px 13px;
+    }
+
+    .memory-caption {
+        font-size: 18px;
+    }
+
+    .lightbox-content {
+        width: 78%;
+    }
+
+    .nav-button {
+        width: 35px;
+        height: 35px;
+        font-size: 25px;
+    }
+
+    .prev-button {
+        left: 2%;
+    }
+
+    .next-button {
+        right: 2%;
+    }
+}
